@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../images/logo2.png'
-import './Login.css'
+import './styles/Login.css'
 
 const Login = () => {
   return (
@@ -20,7 +20,7 @@ const Login = () => {
                 <label>Remember Me</label>
                 <div className='buttonBox'>
                     <p className='forget'>Forgot your password?</p>
-                    <button>LOG IN</button>
+                    <button className='button'>LOG IN</button>
                 </div>
             </div>
         </div>

@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(243,244,246);
+}
+.topBox{
+   /* border: 1px solid black; */
+   height: 60px; 
+   display: flex;
+   justify-content: space-evenly;
+   padding-left: 50px;
+   padding-right: 50px;
+   background-color: white;
+}
+.masaiLogo{
+   flex: .7;
+}
+.logo{
+    width: 40%;
+    margin: 6% 26%;
+}
+.typeBoxes{
+    display: flex;
+    justify-content: space-evenly;
+   flex: 3;
+   align-items: center;
+   color: gray;
+
+}
+
+.typeBoxes > div{
+    /* border: 1px solid black; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.typeBoxes > div:hover{
+    border-bottom: 1px solid gray;
+
+}
+.userBox{
+    /* border: 1px solid black; */
+    flex: .7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+.secondBox{
+    /* border: 1px solid black; */
+   height: 60px; 
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   background-color: white;
+
+}
+.secondBox > div:nth-child(1){
+    flex: 3;
+    margin-left: 7%;
+}
+.secondBox > div:nth-child(2){
+    flex: 1;
+}
+
+.todays{
+    /* border: 1px solid black; */
+    font-size: 25px;
+    font-weight: 650;
+}
+
+.button{
+    font-size: 14px;
+    padding: 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    background-color: rgb(16, 16, 44);
+    color: white;
+    margin-left: 3%;
+}
+.button:hover{
+    cursor: pointer;
+}
