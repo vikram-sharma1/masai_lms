@@ -7,7 +7,7 @@ const Assignments = () => {
     {
         topic:"",
         creator:"",
-        codingDSA:"",
+        type:"",
         date:"",
         time:"",
         link:"",
@@ -45,7 +45,7 @@ const handleSubmit = (e) => {
                   <div><input type="text" className='inpBox' id='creator'  onInput={handleChange}  /></div>
                 </div>
                 <div className='divideInput'>
-                  <div><label>Topic  ( Coding / DSA )</label></div>
+                  <div><label>Type</label></div>
                   <div><input type="text" className='inpBox' id='codingDSA'  onInput={handleChange} /></div>
                 </div>
                 <div className='divideInput'>

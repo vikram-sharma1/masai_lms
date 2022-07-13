@@ -63,8 +63,9 @@ body{
 
 .todays{
     /* border: 1px solid black; */
-    font-size: 25px;
-    font-weight: 650;
+    font-size: 28px;
+    font-weight: 550;
+    color: rgb(0, 0, 62);
 }
 
 .button{

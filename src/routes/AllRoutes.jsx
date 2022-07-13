@@ -1,16 +1,17 @@
 import React from 'react'
 import Login from '../components/Login'
 import { Route, Routes } from 'react-router-dom'
-import Header from '../components/Header'
+// import Header from '../components/otherPages/Header'
 import Home from '../components/Home'
 import Lectures from '../components/Lectures'
 import Assignments from '../components/Assignments'
-import Quizzes from '../components/Quizzes'
-import Tickets from '../components/Tickets'
-import Discussions from '../components/Discussions'
-import Notifications from '../components/Notifications'
-import Electives from '../components/Electives'
+import Quizzes from '../components/otherPages/Quizzes'
+import Tickets from '../components/otherPages/Tickets'
+import Discussions from '../components/otherPages/Discussions'
+import Notifications from '../components/otherPages/Notifications'
+import Electives from '../components/otherPages/Electives'
 import Admin from '../components/Admin'
+import LecDetailsPage from '../components/lecDetailsPage'
 
 const AllRoutes = () => {
   return (
@@ -29,6 +30,7 @@ const AllRoutes = () => {
             <Route exact path='/Notifications' element={<Notifications/>} />
             <Route exact path='/Electives' element={<Electives/>} />
             <Route exact path='/Admin' element={<Admin/>} />
+            <Route exact path='/LecDetailspage' element={<LecDetailsPage/>} />
         </Routes>
     
     </>

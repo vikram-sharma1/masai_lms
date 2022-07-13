@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from './Header'
+// import Header from './Header'
 import { useParams } from 'react-router';
+import Header from './otherPages/Header';
 
 const Assignments = () => {
 
@@ -8,8 +9,8 @@ const Assignments = () => {
 
   return (
     <>
-        <Header/>
         
+        <Header/>
         <div className='secondBox'>
                 <div>
                     <p className='todays'>Assignments</p>
