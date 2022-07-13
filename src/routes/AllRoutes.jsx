@@ -10,6 +10,7 @@ import Tickets from '../components/Tickets'
 import Discussions from '../components/Discussions'
 import Notifications from '../components/Notifications'
 import Electives from '../components/Electives'
+import Admin from '../components/Admin'
 
 const AllRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const AllRoutes = () => {
             <Route exact path='/Discussions' element={<Discussions/>} />
             <Route exact path='/Notifications' element={<Notifications/>} />
             <Route exact path='/Electives' element={<Electives/>} />
+            <Route exact path='/Admin' element={<Admin/>} />
         </Routes>
     
     </>
