@@ -39,10 +39,29 @@ body{
 .userBox{
     /* border: 1px solid black; */
     flex: .7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     color: gray;
+}
+.showName{
+    margin: 5px;
+    /* border: 1px solid black; */
+    text-align: center;
+    padding-top: 7px;
+    font-size: 20px;
+   
+}
+.showName:hover{
+    cursor: pointer;
+    
+}
+.showLogout{
+    margin: 5px;
+    /* border: 1px solid black; */
+    text-align: right;
+    color: red;
+    font-weight: 600;
 }
 .secondBox{
     /* border: 1px solid black; */

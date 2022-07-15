@@ -12,6 +12,7 @@ import Notifications from '../components/otherPages/Notifications'
 import Electives from '../components/otherPages/Electives'
 import Admin from '../components/Admin'
 import LecDetailsPage from '../components/lecDetailsPage'
+import AssDetailPage from '../components/AssDetailPage'
 
 const AllRoutes = () => {
   return (
@@ -31,6 +32,7 @@ const AllRoutes = () => {
             <Route exact path='/Electives' element={<Electives/>} />
             <Route exact path='/Admin' element={<Admin/>} />
             <Route exact path='/LecDetailspage' element={<LecDetailsPage/>} />
+            <Route exact path='/AssigDetailspage' element={<AssDetailPage/>} />
         </Routes>
     
     </>

@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 
@@ -5,7 +6,7 @@ const Assignments = () => {
 
   const [assignment, setAssignment] = useState(
     {
-        topic:"",
+        name:"",
         creator:"",
         type:"",
         date:"",
@@ -24,8 +25,17 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log('yes')
+    // console.log('yes')
     console.log(assignment)
+
+
+
+    axios.post('https://masai-lms.herokuapp.com/assignment', assignment).then((res)=>{
+      // console.log("res" + res.data)
+      alert('Assignment added')
+    }).catch((e)=>{
+      console.log(e)
+    })
 }
 
 
@@ -36,8 +46,8 @@ const handleSubmit = (e) => {
               <form onSubmit={handleSubmit}>
 
                 <div className='divideInput'>
-                  <div><label>Topic Name :</label></div>
-                  <div><input type="text" className='inpBox' id='topic' onInput={handleChange} /></div>
+                  <div><label>Name :</label></div>
+                  <div><input type="text" className='inpBox' id='name' onInput={handleChange} /></div>
                 </div>
 
                 <div className='divideInput'> 
@@ -46,7 +56,7 @@ const handleSubmit = (e) => {
                 </div>
                 <div className='divideInput'>
                   <div><label>Type</label></div>
-                  <div><input type="text" className='inpBox' id='codingDSA'  onInput={handleChange} /></div>
+                  <div><input type="text" className='inpBox' id='type'  onInput={handleChange} /></div>
                 </div>
                 <div className='divideInput'>
                   <div><label>Date</label></div>

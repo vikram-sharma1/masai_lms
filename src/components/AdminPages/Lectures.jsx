@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
+import axios from 'axios'
 
 const Lectures = () => {
 
     const [lecture, setLecture] = useState(
         {
-            topic:"",
+            name:"",
             creator:"",
-            codingDSA:"",
+            topic:"",
             date:"",
             time:"",
             link:""
@@ -25,6 +26,13 @@ const Lectures = () => {
 
         // console.log('yes')
         console.log(lecture)
+
+        axios.post('https://masai-lms.herokuapp.com/lecture', lecture).then((res)=>{
+      console.log("res : " + res.data)
+          alert('Lecture added')
+        }).catch((e)=>{
+          console.log(e)
+        })
     }
 
 
@@ -36,7 +44,7 @@ const Lectures = () => {
 
                 <div className='divideInput'>
                   <div><label>Topic Name :</label></div>
-                  <div><input type="text" id='topic' className='inpBox' onInput={handleChange}/></div>
+                  <div><input type="text" id='name' className='inpBox' onInput={handleChange}/></div>
                 </div>
 
                 <div className='divideInput'> 
@@ -45,7 +53,7 @@ const Lectures = () => {
                 </div>
                 <div className='divideInput'>
                   <div><label>Topic ( Coding / DSA )</label></div>
-                  <div><input type="text" id='codingDSA' className='inpBox'  onInput={handleChange} /></div>
+                  <div><input type="text" id='topic' className='inpBox'  onInput={handleChange} /></div>
                 </div>
                 <div className='divideInput'>
                   <div><label>Date</label></div>
