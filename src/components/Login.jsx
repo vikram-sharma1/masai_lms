@@ -76,7 +76,7 @@ const Login = () => {
                     <br />
                 <label>Password</label>
                     <br />
-                <input type="text" className='inputBar' id='password' onChange={handleChange}/>
+                <input type="password" className='inputBar' id='password' onChange={handleChange}/>
                     <br />
                 <input type="checkbox" name="" id="" />
                 <label>Remember Me</label>
