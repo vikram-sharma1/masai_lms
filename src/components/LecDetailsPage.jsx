@@ -31,4 +31,4 @@ const LecDetailsPage = () => {
   )
 }
 
-export default LecDetailsPage
+export default LecDetailsPage 

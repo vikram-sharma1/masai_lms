@@ -9,11 +9,11 @@ import {AuthContextProvider} from './components/context/AuthContext'
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <React.StrictMode>
-      <AuthContextProvider>
+    <AuthContextProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-     </AuthContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>
 
 

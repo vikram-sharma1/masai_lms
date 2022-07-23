@@ -36,10 +36,14 @@ const Login = () => {
         // console.log('yes')
         axios.post('https://masai-lms.herokuapp.com/login',login).then(({data})=>{
             console.log(data)
-            console.log(data.user.name)
+            console.log(data.user.email)
+            console.log(data.user.password)
 
-
-            if(data.token){
+            if(data.user.email == "admin"){
+                alert('Welcome Admin')
+                navigate('/Admin')
+            }
+            else if(data.user.email != "admin"){
                 alert('Login Successful')
                 setToken(data.token)
                 setUserName(data.user.name)

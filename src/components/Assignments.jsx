@@ -11,20 +11,24 @@ const Assignments = () => {
 
   
   const [assign, setAssign] = useState([])
+  const [page, setpage] = useState(1)
+
+  const [totalPage, setTotalPage] = useState() 
 
   const navigate = useNavigate()
 
 
   useEffect(()=>{
     assignFetch()
-  },[])
+  },[page])
   
 
   const assignFetch = () => {
 
-    axios.get('https://masai-lms.herokuapp.com/assignment').then((res)=>{
+    axios.get(`https://masai-lms.herokuapp.com/assignment?page=${page}`).then((res)=>{
       // console.log(res.data)
-      setAssign(res.data)
+      setAssign(res.data.user)
+      setTotalPage(res.data.totalpage)
     }).catch((error)=>{
       console.log(error)
     })
@@ -37,7 +41,7 @@ const Assignments = () => {
 
     localStorage.setItem('AssignmentData', JSON.stringify(data))
 
-    navigate('/AssigDetailspage')
+    navigate('/Assignments/AssigDetailspage')
 
   }
 
@@ -69,6 +73,20 @@ const Assignments = () => {
                   )
               })}
           </div>
+          <div className='buttonDiv'>
+        <button  className='button-4' onClick={()=>{
+          if(page != 1 ){
+            setpage(page - 1)
+            // console.log(page)
+          }
+        }}>Prev</button>
+        <button className='button-4' onClick={()=>{
+          if(page != totalPage){
+            setpage(page + 1)
+            // console.log(page)
+          }
+        }}>Next</button>
+        </div>
     </>
   )
 }

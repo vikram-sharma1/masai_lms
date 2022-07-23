@@ -11,8 +11,9 @@ import Discussions from '../components/otherPages/Discussions'
 import Notifications from '../components/otherPages/Notifications'
 import Electives from '../components/otherPages/Electives'
 import Admin from '../components/Admin'
-import LecDetailsPage from '../components/lecDetailsPage'
 import AssDetailPage from '../components/AssDetailPage'
+// import LecDetailsPage from '../components/lecDetailsPage'
+import LecDetailsPage from '../components/LecDetailsPage'
 
 const AllRoutes = () => {
   return (
@@ -31,8 +32,10 @@ const AllRoutes = () => {
             <Route exact path='/Notifications' element={<Notifications/>} />
             <Route exact path='/Electives' element={<Electives/>} />
             <Route exact path='/Admin' element={<Admin/>} />
-            <Route exact path='/LecDetailspage' element={<LecDetailsPage/>} />
-            <Route exact path='/AssigDetailspage' element={<AssDetailPage/>} />
+            <Route exact path='/Lectures/LecDetailspage' element={<LecDetailsPage/>} />
+            {/* <Route exact path='/LecDetailspage' element={<LecDetailsPage/>} /> */}
+            <Route exact path='/Assignments/AssigDetailspage' element={<AssDetailPage/>} />
+            {/* <Route exact path='/AssigDetailspage' element={<AssDetailPage/>} /> */}
         </Routes>
     
     </>
